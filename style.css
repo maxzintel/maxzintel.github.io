@@ -58,11 +58,11 @@ h2 {
 
 @media only screen and (max-width: 767px) {
   .logo-box {
-    width: 10%;
+    width: 15%;
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .content {
