@@ -55,3 +55,17 @@ h2 {
 * {
   box-sizing: border-box;
 }
+
+@media only screen and (max-width: 767px) {
+  .logo-box {
+    width: 10%;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  .content {
+    width: 60%;
+  }
+}
