@@ -56,6 +56,19 @@ h2 {
   box-sizing: border-box;
 }
 
+a {
+  color: #b399c8; /* Light Purple */
+  /* OR */
+  color: #66cccc; /* Teal */
+  text-decoration: none; /* optional: removes underline from links */
+}
+
+a:hover {
+  color: #ffffff; /* optional: changes color on hover, here to white */
+  text-decoration: underline; /* optional: adds underline on hover */
+}
+
+
 @media only screen and (max-width: 767px) {
   .logo-box {
     width: 15%;
