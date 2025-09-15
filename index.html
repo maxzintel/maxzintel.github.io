@@ -6,100 +6,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>maxzintel.dev</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-  <link rel="icon" href="./media/purplecow.gif"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" href="./media/purplecow.gif">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <section class="header">
-    <h2 class="header-text">maxzintel.dev</h2>
-    </p>
-    <p class="logo-box">
-      <a href="https://github.com/maxzintel">
-        <img class="logo" src="./media/Google Chrome.png" alt="Max's GitHub Profile">
-      </a>
-    </p>
-    <p class="logo-box">
-      <a href="https://twitter.com/maxjzin">
-        <img class="logo" src="./media/Twitter.png" alt="Max's Twitter Profile">
-      </a>
-    </p>
-    <p class="logo-box">
-      <a href="https://www.instagram.com/max.zintel/">
-        <img class="logo" src="./media/Instagram Old.png" alt="Max's Instagram Profile">
-      </a>
-    </p>
-    <p class="logo-box">
-      <a href="https://www.linkedin.com/in/max-zintel/">
-        <img class="logo" src="./media/LinkedIn.png" alt="Max's LinkedIn Profile">
-      </a>
-    </p>
-  </section>
-  <div class="content">
-    <section>
-      <img class="responsive" src="./media/purplecow.gif">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="marquee" aria-label="Announcement">
+      <div class="marquee__inner" aria-hidden="true">
+        <span>LEVEL UP • LOOX GAMES • SOCIAL PROOF • STELLAR REVIEWS • </span>
+        <span>LEVEL UP • LOOX GAMES • SOCIAL PROOF • STELLAR REVIEWS • </span>
+      </div>
+    </div>
+    <nav class="main-nav container" aria-label="Primary">
+      <section class="header">
+        <h2 class="header-text">maxzintel.dev</h2>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <ul id="primary-nav" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+          <p class="logo-box">
+            <a href="https://github.com/maxzintel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="./media/Google Chrome.png" alt="Max's GitHub Profile">
+            </a>
+          </p>
+          <p class="logo-box">
+            <a href="https://twitter.com/maxjzin" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="./media/twitter.png" alt="Max's Twitter Profile">
+            </a>
+          </p>
+          <p class="logo-box">
+            <a href="https://www.instagram.com/max.zintel/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="./media/Instagram Old.png" alt="Max's Instagram Profile">
+            </a>
+          </p>
+          <p class="logo-box">
+            <a href="https://www.linkedin.com/in/max-zintel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="./media/linkedin.png" alt="Max's LinkedIn Profile">
+            </a>
+          </p>
+          <button id="audio-toggle" class="audio-toggle is-muted" aria-label="Toggle audio" title="Toggle audio">
+            <span class="icon-on" aria-hidden="true">🔊</span>
+            <span class="icon-off" aria-hidden="true">🔇</span>
+          </button>
+        </div>
+      </section>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="hero" class="hero-section" aria-label="Intro">
+      <canvas id="starfield" aria-hidden="true">Your browser does not support the canvas element. The background animation is decorative.</canvas>
+      <div class="hero-content">
+        <h1 class="neon-title">Max Zintel</h1>
+        <p class="tagline">DevOps Lead • Builder • Retro Web Enjoyer</p>
+        <a href="#projects" class="cta-button" aria-label="View my projects">View My Work</a>
+      </div>
     </section>
-    <section>
-      <p class="text-box">
-        Max Zintel
-      </p>
-      <ul>
-        <li>
-          <p>DevOps Lead, Creator of MaxFindsCars.com</p>
-        </li>
-        <li>
-          Learning by doing:
-          <ul>
-            <li>
-              <p>Entrepeneurship & Early-Stage Business Development</p>
-            </li>
-            <li>
-              <p>Leadership & Mental Models</p>
-            </li>
-            <li>
-              <p>Human Optimization</p>
-            </li>
-            <li>
-              <p>Project Conception & Development</p>
-            </li>
-          </ul>
-        </li>
+    <div class="content">
+      <section>
+        <img class="responsive" src="./media/purplecow.gif">
+      </section>
+      <section id="about" class="about-section">
+        <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true">About</h2>
+        <p class="text-box" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
+          Max Zintel
+        </p>
+        <ul data-aos="fade-up" data-aos-delay="100" data-aos-once="true" aria-label="About highlights">
+          <li>
+            <p>DevOps Lead, Creator of MaxFindsCars.com</p>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="150" data-aos-once="true">
+            Learning by doing:
+            <ul aria-label="Current learning focuses">
+              <li data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+                <p>Entrepeneurship & Early-Stage Business Development</p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="250" data-aos-once="true">
+                <p>Leadership & Mental Models</p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+                <p>Human Optimization</p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="350" data-aos-once="true">
+                <p>Project Conception & Development</p>
+              </li>
+            </ul>
+          </li>
 
-        <li>
-          Favorite Podcasts & Books Right Now:
-          <ul>
-            <li>
-              <a href="https://hubermanlab.com/">Huberman Lab</a>
-            </li>
-            <li>
-              <a href="https://open.spotify.com/show/6YNopzKDGDwf0auIpPTIID?si=032b5f1c00634599">The Game w/ Alex Hormozi</a>
-            </li>
-            <li>
-              <a href="https://open.spotify.com/show/1gqvQ7h7BxNSVoQVTnwihr?si=dd31b08a81fb444d">How to Take Over the World</a>
-            </li>
-            <li>
-              <a href="https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike/dp/1501135910/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=">Shoe Dog, by Phil Knight</a>
-            </li>
-            <li>
-              <a href="https://www.amazon.com/Build-Unorthodox-Guide-Making-Things/dp/0063046067/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1672157303&sr=1-1">Build, By Tony Fadell</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          Industries & Other Things That Interest Me:
-          <ul>
-            <li>
-              <p>Applications Built w/ Generative AI</p>
-            <li>
-              <p>Motorsport & Automotive</p>
-            </li>
-            <li>
-              <p>Fitness & Weightlifting</p>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-  </div>
+          <li data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+            Favorite Podcasts & Books Right Now:
+            <ul aria-label="Favorite podcasts and books">
+              <li data-aos="fade-up" data-aos-delay="240" data-aos-once="true">
+                <a href="https://hubermanlab.com/">Huberman Lab</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="280" data-aos-once="true">
+                <a href="https://open.spotify.com/show/6YNopzKDGDwf0auIpPTIID?si=032b5f1c00634599">The Game w/ Alex Hormozi</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="320" data-aos-once="true">
+                <a href="https://open.spotify.com/show/1gqvQ7h7BxNSVoQVTnwihr?si=dd31b08a81fb444d">How to Take Over the World</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="360" data-aos-once="true">
+                <a href="https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike/dp/1501135910/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=">Shoe Dog, by Phil Knight</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                <a href="https://www.amazon.com/Build-Unorthodox-Guide-Making-Things/dp/0063046067/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1672157303&sr=1-1">Build, By Tony Fadell</a>
+              </li>
+            </ul>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="220" data-aos-once="true">
+            Industries & Other Things That Interest Me:
+            <ul aria-label="Interest areas">
+              <li data-aos="fade-up" data-aos-delay="260" data-aos-once="true">
+                <p>Applications Built w/ Generative AI</p>
+              <li data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+                <p>Motorsport & Automotive</p>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="340" data-aos-once="true">
+                <p>Fitness & Weightlifting</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section id="projects"></section>
+      <section id="contact"></section>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.43/bundled/lenis.min.js"></script>
+  <script src="https://unpkg.com/howler@2.2.4/dist/howler.core.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
