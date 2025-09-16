@@ -145,7 +145,7 @@
             <p class="project-desc">The easiest way to find your dream car.</p>
             <div class="project-links">
               <a class="btn" href="https://maxfindscars.com" target="_blank" rel="noopener noreferrer" aria-label="Open MaxFindsCars.com in a new tab">Visit</a>
-              <a class="btn-secondary" href="https://github.com/maxzintel" target="_blank" rel="noopener noreferrer" aria-label="View MaxFindsCars related code on GitHub">Details</a>
+              <a class="btn-secondary" href="#" data-project="maxfindscars" aria-label="View details for MaxFindsCars">Details</a>
             </div>
           </article>
 
@@ -156,7 +156,7 @@
             <h3 class="project-title" id="proj-thissite">DevTurbo</h3>
             <p class="project-desc">Cloud experts for VC-funded startups.</p>
             <div class="project-links">
-              <a class="btn-secondary" href="https://github.com/maxzintel/maxzintel.github.io" target="_blank" rel="noopener noreferrer" aria-label="View this site's code on GitHub">Details</a>
+              <a class="btn-secondary" href="#" data-project="devturbo" aria-label="View details for DevTurbo">Details</a>
             </div>
           </article>
 
@@ -168,7 +168,7 @@
             <p class="project-desc">Full time role managing our core CRM Engineering team.</p>
             <div class="project-links">
               <a class="btn" href="https://funnelleasing.com" target="_blank" rel="noopener noreferrer" aria-label="Open Max's GitHub in a new tab">Visit</a>
-              <a class="btn-secondary" href="https://github.com/maxzintel" target="_blank" rel="noopener noreferrer" aria-label="View MaxFindsCars related code on GitHub">Details</a>
+              <a class="btn-secondary" href="#" data-project="funnel" aria-label="View details for Funnel Leasing">Details</a>
             </div>
           </article>
         </div>
@@ -200,6 +200,63 @@
       </section>
     </div>
   </main>
+
+  <!-- Project Detail Templates (edit freely) -->
+  <template id="template-project-maxfindscars">
+    <h3 class="modal-title">MaxFindsCars.com</h3>
+    <p>The easiest way to find enthusiast cars online. A SaaS business I've built from the ground up, working on it every day for the last 550+ days and counting.</p>
+    <ul>
+      <li>Gathers data from many sources of varying types (auction sites, dealerships, syndication, etc), and sends listing notifications to users via email.</li>
+      <li>Thousands of users, hundreds of thousands of listings, and growing.</li>
+      <li>Freemium model with paid tier & emphasis on social share.</li>
+      <li>Stack: Next.js, Postgres, Render, Posthog, Stripe, etc.</li>
+      <li>Skills: Bootstrapped marketing & growth, feature prioritization, business operation, etc.</li>
+    </ul>
+    <p>
+      <a href="https://maxfindscars.com" target="_blank" rel="noopener noreferrer">Visit Site</a>
+    </p>
+  </template>
+
+  <template id="template-project-devturbo">
+    <h3 class="modal-title">DevTurbo</h3>
+    <p>Cloud experts for VC-funded startups. A fractionalized consulting firm I started in 2023 to help startups get their infrastructure, CI/CD, and DevOps workflows up and running quickly and efficiently.</p>
+    <ul>
+      <li>Focus: AWS, IaC, CI/CD, Kubernetes, cost/perf optimization, secrets management, etc.</li>
+      <li>Followed the 'productized service' model, clients were mostly VC/Angel-funded startups.</li>
+      <li>Scaled to 6-figures of ARR, but shut down in 2024 to focus on other projects.</li>
+    </ul>
+  </template>
+
+  <template id="template-project-funnel">
+    <h3 class="modal-title">Funnel Leasing</h3>
+    <p>Full-time role managing core CRM engineering. Drove roadmap, quality, and reliability improvements across critical systems. Prior to this, I was the DevOps Lead at Funnel Leasing as well.</p>
+    <ul>
+      <li>Areas: CRM, DevOps, Infrastructure, CI/CD, Security, Monitoring / Site Reliability.</li>
+      <li>Currently managing a team of 5 engineers, 2 QA engineers, and 1 Product Manager.</li>
+      <li>Created monitoring processes and workflows to improve team’s code reliability, context, and performance.</li>
+      <li>Strategic team leader bridging engineering, product, site reliability, and more, serving as the impetus & facilitator
+        of a breadth of initiatives - internal & external to our engineering team.</li>
+      <li>Led project to implement PgBouncer, a database connection sharing tool, for our primary CRM application.
+        PgBouncer has 100% availability in the 2 years since its deployment in our environment and improved
+        web app response times by 300% under load.</li>
+      <li>Led SOC 2 Audit process for our cloud and infrastructure. Ensured we were certified and re-certified
+        repeatedly during our tenure via process implementation and security scanning/hardening.</li>
+      <li>& lots more... Email me for more details!</li>
+    </ul>
+    <p>
+      <a href="https://funnelleasing.com" target="_blank" rel="noopener noreferrer">Company Site</a>
+    </p>
+  </template>
+
+  <!-- Reusable Modal -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button class="modal-close" aria-label="Close details">✕</button>
+      <div class="modal-content" id="project-modal-content">
+        <!-- content injected dynamically -->
+      </div>
+    </div>
+  </div>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.43/bundled/lenis.min.js"></script>

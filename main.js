@@ -176,6 +176,48 @@
     }
   }
 
+  function initProjectModals() {
+    var overlay = document.getElementById('project-modal');
+    var content = document.getElementById('project-modal-content');
+    var closeBtn = overlay ? overlay.querySelector('.modal-close') : null;
+    if (!overlay || !content || !closeBtn) return;
+
+    function openModal(projectKey) {
+      var tpl = document.getElementById('template-project-' + projectKey);
+      if (!tpl) return;
+      content.innerHTML = '';
+      content.appendChild(tpl.content.cloneNode(true));
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden', 'false');
+      closeBtn.focus();
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Open handlers for all Details buttons
+    document.querySelectorAll('[data-project]').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var key = btn.getAttribute('data-project');
+        openModal(key);
+      });
+    });
+
+    // Close handlers
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+    });
+  }
+
   // Audio Controller
   var AudioController = (function () {
     var api = { init: init, toggleMute: toggleMute, playSound: playSound };
@@ -264,6 +306,7 @@
       initStarfield();
       AudioController.init();
       initScanlineEffect();
+      initProjectModals();
 
       var supportsCanvas = !!window.HTMLCanvasElement;
       var supportsCssSnap = CSS && CSS.supports && CSS.supports('scroll-snap-type: y mandatory');
