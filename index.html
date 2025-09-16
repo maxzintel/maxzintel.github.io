@@ -19,20 +19,34 @@
   <header class="site-header">
     <div class="marquee" aria-label="Announcement">
       <div class="marquee__inner" aria-hidden="true">
-        <span>I'VE ALWAYS WANTED TO MAKE A WEBSITE WITH A MARQUEE • WHAT'S SUPPOSED TO BE UP HERE? • 50% OFF SALE ON VISITING MAXZINTEL.DEV • FOR REAL, SUBSCRIBE TO MAXFINDSCARS.COM • </span>
+        <span>I'VE ALWAYS WANTED TO MAKE A WEBSITE WITH A MARQUEE • WHAT'S SUPPOSED TO BE UP HERE? • 50% OFF SALE ON... SOMETHING • SUBSCRIBE TO MAXFINDSCARS.COM • </span>
         <span>I'VE ALWAYS WANTED TO MAKE A WEBSITE WITH A MARQUEE • WHAT'S SUPPOSED TO BE UP HERE? • 50% OFF SALE ON VISITING MAXZINTEL.DEV • FOR REAL, SUBSCRIBE TO MAXFINDSCARS.COM • </span>
       </div>
     </div>
     <nav class="main-nav container" aria-label="Primary">
       <section class="header">
         <h2 class="header-text">maxzintel.dev</h2>
-        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <div class="header-actions">
+          <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+          <button id="audio-toggle" class="audio-toggle is-muted" aria-label="Toggle audio" title="Toggle audio">
+            <span class="icon-on" aria-hidden="true">🔊</span>
+            <span class="icon-off" aria-hidden="true">🔇</span>
+          </button>
+        </div>
         <ul id="primary-nav" class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="social-icons">
+      </section>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="hero" class="hero-section" aria-label="Intro">
+      <canvas id="starfield" aria-hidden="true">Your browser does not support the canvas element. The background animation is decorative.</canvas>
+      <div class="hero-content">
+        <h1 class="neon-title" data-aos="fade-up" data-aos-once="true">Max Zintel</h1>
+        <div class="social-icons" aria-label="Social links">
           <p class="logo-box">
             <a href="https://github.com/maxzintel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
               <img class="logo" src="./media/Google Chrome.png" alt="Max's GitHub Profile">
@@ -53,19 +67,7 @@
               <img class="logo" src="./media/linkedin.png" alt="Max's LinkedIn Profile">
             </a>
           </p>
-          <button id="audio-toggle" class="audio-toggle is-muted" aria-label="Toggle audio" title="Toggle audio">
-            <span class="icon-on" aria-hidden="true">🔊</span>
-            <span class="icon-off" aria-hidden="true">🔇</span>
-          </button>
         </div>
-      </section>
-    </nav>
-  </header>
-  <main id="main">
-    <section id="hero" class="hero-section" aria-label="Intro">
-      <canvas id="starfield" aria-hidden="true">Your browser does not support the canvas element. The background animation is decorative.</canvas>
-      <div class="hero-content">
-        <h1 class="neon-title" data-aos="fade-up" data-aos-once="true">Max Zintel</h1>
         <p class="tagline" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">Software Leader • Solopreneur • Car Nut • Gym Rat</p>
         <a href="#projects" class="cta-button" aria-label="View my projects" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">View My Work</a>
       </div>
@@ -180,11 +182,6 @@
           <div class="contact-content" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
             <p>I'm not actively looking for new roles at the moment, but feel free to reach out if you'd like to connect!</p>
             <a href="mailto:maxz@hey.com" class="cta-button" aria-label="Email Max">Email Me</a>
-
-            <div class="social-links" role="list" aria-label="Contact social links">
-              <a href="https://github.com/maxzintel" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/max-zintel/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
           </div>
         </div>
 
@@ -194,6 +191,28 @@
             <button id="scanline-toggle" class="effect-toggle" aria-label="Toggle scanline effect" aria-pressed="true">
               Scanlines: <span class="toggle-state">On</span>
             </button>
+            <div class="social-icons" aria-label="Social links footer">
+              <p class="logo-box">
+                <a href="https://github.com/maxzintel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                  <img class="logo" src="./media/Google Chrome.png" alt="Max's GitHub Profile">
+                </a>
+              </p>
+              <p class="logo-box">
+                <a href="https://twitter.com/maxjzin" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                  <img class="logo" src="./media/twitter.png" alt="Max's Twitter Profile">
+                </a>
+              </p>
+              <p class="logo-box">
+                <a href="https://www.instagram.com/max.zintel/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                  <img class="logo" src="./media/Instagram Old.png" alt="Max's Instagram Profile">
+                </a>
+              </p>
+              <p class="logo-box">
+                <a href="https://www.linkedin.com/in/max-zintel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                  <img class="logo" src="./media/linkedin.png" alt="Max's LinkedIn Profile">
+                </a>
+              </p>
+            </div>
           </div>
           <div id="scanline-overlay" class="scanline-overlay active" aria-hidden="true"></div>
         </footer>
