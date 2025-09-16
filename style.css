@@ -45,13 +45,15 @@ h2 {
 .header {
   display: flex;
   align-self: stretch;
+  align-items: center;
+  gap: var(--spacing-lg);
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .header-text {
-  width: 85%;
-  margin-right: 40px;
+  margin-right: var(--spacing-lg);
+  flex: 0 0 auto;
 }
 
 .content {
@@ -219,13 +221,16 @@ input, button, textarea, select { font: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 56px;
+  min-height: 72px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 /* Navigation */
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: var(--spacing-lg);
   margin: 0;
   padding: 0;
@@ -268,7 +273,7 @@ input, button, textarea, select { font: inherit; }
   .nav-toggle { display: inline-block; margin-left: auto; }
   .nav-links {
     position: absolute;
-    top: 56px;
+    top: 72px;
     right: 16px;
     background: rgba(14, 17, 23, 0.95);
     border: 1px solid rgba(255,255,255,0.08);
@@ -509,3 +514,48 @@ input, button, textarea, select { font: inherit; }
   .project-links .btn, .project-links .btn-secondary { padding: 12px 16px; }
   .project-card { padding: var(--spacing-lg); }
 }
+
+/* Contact section */
+.contact-section { position: relative; padding: 4rem 0; }
+.contact-section .section-container { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: var(--spacing-md); padding-right: var(--spacing-md); }
+.contact-content { margin-top: var(--spacing-md); }
+.social-links { display: flex; gap: 1.5rem; margin-top: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.social-icon { font-family: var(--heading-font); color: var(--text-color); text-decoration: none; transition: color 0.3s ease, text-shadow 0.3s ease; }
+.social-icon:hover, .social-icon:focus-visible { color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
+
+.site-footer { padding: 2rem 0; text-align: center; position: relative; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(14,17,23,0.5); }
+.footer-content { display: flex; gap: var(--spacing-md); align-items: center; justify-content: center; flex-wrap: wrap; }
+
+/* Scanline effect overlay */
+.scanline-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.45) 50%
+  );
+  background-size: 100% 2px;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  transition: opacity 0.3s ease;
+}
+.scanline-overlay.active { opacity: 0.3; }
+
+/* Effect toggle button */
+.effect-toggle {
+  background: none;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  font-family: var(--heading-font);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.effect-toggle:hover, .effect-toggle:focus-visible { border-color: var(--neon-green); color: var(--neon-green); }

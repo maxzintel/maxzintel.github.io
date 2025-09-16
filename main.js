@@ -10,7 +10,8 @@
       duration: prefersReduced ? 0 : 700,
       easing: 'ease-out',
       once: true,
-      disable: prefersReduced
+      disable: prefersReduced,
+      offset: 80
     });
   }
 
@@ -142,6 +143,39 @@
     });
   }
 
+  function initScanlineEffect() {
+    try {
+      var toggleButton = document.getElementById('scanline-toggle');
+      var scanlineOverlay = document.getElementById('scanline-overlay');
+      var toggleState = document.querySelector('.toggle-state');
+      if (!toggleButton || !scanlineOverlay || !toggleState) {
+        console.debug('Scanline elements not found; skipping');
+        return;
+      }
+
+      var active = true; // default ON when no saved preference
+      try {
+        var stored = localStorage.getItem('scanlineActive');
+        if (stored !== null) active = (stored === 'true');
+      } catch (e) {}
+      scanlineOverlay.classList.toggle('active', active);
+      toggleState.textContent = active ? 'On' : 'Off';
+      toggleButton.setAttribute('aria-pressed', String(active));
+
+      toggleButton.addEventListener('click', function () {
+        var isActive = scanlineOverlay.classList.toggle('active');
+        toggleState.textContent = isActive ? 'On' : 'Off';
+        try { localStorage.setItem('scanlineActive', String(isActive)); } catch (e) {}
+        toggleButton.setAttribute('aria-pressed', String(isActive));
+        if (typeof AudioController !== 'undefined' && AudioController.playSound) {
+          AudioController.playSound('click');
+        }
+      });
+    } catch (e) {
+      console.debug('Scanline init error:', e);
+    }
+  }
+
   // Audio Controller
   var AudioController = (function () {
     var api = { init: init, toggleMute: toggleMute, playSound: playSound };
@@ -229,6 +263,7 @@
       initMobileNav();
       initStarfield();
       AudioController.init();
+      initScanlineEffect();
 
       var supportsCanvas = !!window.HTMLCanvasElement;
       var supportsCssSnap = CSS && CSS.supports && CSS.supports('scroll-snap-type: y mandatory');

@@ -65,9 +65,9 @@
     <section id="hero" class="hero-section" aria-label="Intro">
       <canvas id="starfield" aria-hidden="true">Your browser does not support the canvas element. The background animation is decorative.</canvas>
       <div class="hero-content">
-        <h1 class="neon-title">Max Zintel</h1>
-        <p class="tagline">Software Leader • Solopreneur • Car Nut • Gym Rat </p>
-        <a href="#projects" class="cta-button" aria-label="View my projects">View My Work</a>
+        <h1 class="neon-title" data-aos="fade-up" data-aos-once="true">Max Zintel</h1>
+        <p class="tagline" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">Software Leader • Solopreneur • Car Nut • Gym Rat</p>
+        <a href="#projects" class="cta-button" aria-label="View my projects" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">View My Work</a>
       </div>
     </section>
     <div class="content">
@@ -75,31 +75,26 @@
         <img class="responsive" src="./media/purplecow.gif">
       </section>
       <section id="about" class="about-section">
-        <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true">About</h2>
-        <p class="text-box" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
-          Max Zintel
-        </p>
+        <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true" data-aos-offset="100">About</h2>
+
         <ul data-aos="fade-up" data-aos-delay="100" data-aos-once="true" aria-label="About highlights">
           <li>
-            <p>Strategic Software Leader, Creator of MaxFindsCars.com</p>
+            <p>DevOps Lead, Creator of MaxFindsCars.com</p>
           </li>
           <li data-aos="fade-up" data-aos-delay="150" data-aos-once="true">
             Learning by doing:
             <ul aria-label="Current learning focuses">
-              <li data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+              <li>
                 <p>Entrepeneurship & Early-Stage Business Development</p>
               </li>
-              <li data-aos="fade-up" data-aos-delay="250" data-aos-once="true">
+              <li>
                 <p>Leadership & Mental Models</p>
               </li>
-              <li data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
-                <p>Pickleball & Golf</p>
+              <li>
+                <p>Human Optimization</p>
               </li>
-              <li data-aos="fade-up" data-aos-delay="350" data-aos-once="true">
-                <p>Sim Racing</p>
-              </li>
-              <li data-aos="fade-up" data-aos-delay="350" data-aos-once="true">
-                <p>How to Make a 40yo Car Reliable</p>
+              <li>
+                <p>Project Conception & Development</p>
               </li>
             </ul>
           </li>
@@ -107,6 +102,12 @@
           <li data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
             Favorite Podcasts & Books Right Now:
             <ul aria-label="Favorite podcasts and books">
+              <li data-aos="fade-up" data-aos-delay="240" data-aos-once="true">
+                <a href="https://hubermanlab.com/">Huberman Lab</a>
+              </li>
+              <li data-aos="fade-up" data-aos-delay="280" data-aos-once="true">
+                <a href="https://open.spotify.com/show/6YNopzKDGDwf0auIpPTIID?si=032b5f1c00634599">The Game w/ Alex Hormozi</a>
+              </li>
               <li data-aos="fade-up" data-aos-delay="320" data-aos-once="true">
                 <a href="https://open.spotify.com/show/1gqvQ7h7BxNSVoQVTnwihr?si=dd31b08a81fb444d">How to Take Over the World</a>
               </li>
@@ -115,15 +116,6 @@
               </li>
               <li data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
                 <a href="https://www.amazon.com/Build-Unorthodox-Guide-Making-Things/dp/0063046067/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1672157303&sr=1-1">Build, By Tony Fadell</a>
-              </li>
-              <li data-aos="fade-up" data-aos-delay="320" data-aos-once="true">
-                <a href="https://open.spotify.com/show/3mliji9352UAk3XnWElnDV?si=07063b2256d44751">My First Million</a>
-              </li>
-              <li data-aos="fade-up" data-aos-delay="320" data-aos-once="true">
-                <a href="https://www.amazon.com/Alchemist-Paulo-Coelho/dp/0062315005/ref=pd_lpo_d_sccl_3/138-3035619-2477824?pd_rd_w=wed8Q&content-id=amzn1.sym.4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_p=4c8c52db-06f8-4e42-8e56-912796f2ea6c&pf_rd_r=BRBXCGD9FA5RTBDCZX8K&pd_rd_wg=RufyB&pd_rd_r=7c1f711c-0ec1-4d68-90e3-4b42e1a4deff&pd_rd_i=0062315005&psc=1">The Alchemist, by Paulo Coelho</a>
-              </li>
-              <li data-aos="fade-up" data-aos-delay="320" data-aos-once="true">
-                <a href="https://www.amazon.com/dp/000819680X/?bestFormat=true&k=how%20to%20build%20a%20car&ref_=nb_sb_ss_w_scx-ent-pd-bk-d_k0_1_18_de&crid=38SQO0NQAJQPK&sprefix=how%20to%20build%20a%20car">How to Build a Car, by Adrian Newey</a>
               </li>
             </ul>
           </li>
@@ -143,47 +135,69 @@
         </ul>
       </section>
       <section id="projects" class="projects-section">
-        <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true">Projects</h2>
+        <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true" data-aos-offset="100">Projects</h2>
         <div class="projects-grid container" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
           <article class="project-card" data-aos="fade-up" data-aos-delay="150" data-aos-once="true" aria-labelledby="proj-maxfindscars">
-            <div class="project-media ">
-              <div class="project-media media-zoom-in contain">
-                <img src="./media/mfc-gigachad.gif" alt="Preview of MaxFindsCars.com search interface" loading="lazy" decoding="async">
-              </div>
+            <div class="project-media">
+              <img src="./media/mfc-gigachad.gif" alt="Preview of MaxFindsCars.com search interface" loading="lazy" decoding="async">
             </div>
             <h3 class="project-title" id="proj-maxfindscars">MaxFindsCars.com</h3>
             <p class="project-desc">The easiest way to find your dream car.</p>
             <div class="project-links">
               <a class="btn" href="https://maxfindscars.com" target="_blank" rel="noopener noreferrer" aria-label="Open MaxFindsCars.com in a new tab">Visit</a>
-              <a class="btn-secondary" href="https://github.com/maxzintel" target="_blank" rel="noopener noreferrer" aria-label="View MaxFindsCars related code on GitHub">Code</a>
+              <a class="btn-secondary" href="https://github.com/maxzintel" target="_blank" rel="noopener noreferrer" aria-label="View MaxFindsCars related code on GitHub">Details</a>
             </div>
           </article>
 
-          <article class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-once="true" aria-labelledby="proj-thissite">
+          <article class="project-card" data-aos="fade-up" data-aos-delay="220" data-aos-once="true" aria-labelledby="proj-thissite">
             <div class="project-media">
-              <img src="./media/purplecow.gif" alt="Preview of this retro website" loading="lazy" decoding="async">
+              <img src="./media/drift.gif" alt="Preview of this retro website" loading="lazy" decoding="async">
             </div>
-            <h3 class="project-title" id="proj-thissite">This Site</h3>
-            <p class="project-desc">Retro-inspired portfolio with canvas starfield and audio.</p>
+            <h3 class="project-title" id="proj-thissite">DevTurbo</h3>
+            <p class="project-desc">Cloud experts for VC-funded startups.</p>
             <div class="project-links">
-              <a class="btn" href="#hero" aria-label="Jump to site hero">Live</a>
-              <a class="btn-secondary" href="https://github.com/maxzintel/maxzintel.github.io" target="_blank" rel="noopener noreferrer" aria-label="View this site's code on GitHub">Code</a>
+              <a class="btn-secondary" href="https://github.com/maxzintel/maxzintel.github.io" target="_blank" rel="noopener noreferrer" aria-label="View this site's code on GitHub">Details</a>
             </div>
           </article>
 
-          <article class="project-card" data-aos="fade-up" data-aos-delay="250" data-aos-once="true" aria-labelledby="proj-misc">
+          <article class="project-card" data-aos="fade-up" data-aos-delay="290" data-aos-once="true" aria-labelledby="proj-misc">
             <div class="project-media">
-              <img src="./media/purplecow.gif" alt="Preview collage of various dev experiments" loading="lazy" decoding="async">
+              <img src="./media/funnel-logo.gif" alt="Preview collage of various dev experiments" loading="lazy" decoding="async">
             </div>
-            <h3 class="project-title" id="proj-misc">Misc Dev</h3>
-            <p class="project-desc">Experiments, utilities, and prototypes.</p>
+            <h3 class="project-title" id="proj-misc">Funnel Leasing</h3>
+            <p class="project-desc">Full time role managing our core CRM Engineering team.</p>
             <div class="project-links">
-              <a class="btn" href="https://github.com/maxzintel" target="_blank" rel="noopener noreferrer" aria-label="Open Max's GitHub in a new tab">GitHub</a>
+              <a class="btn" href="https://funnelleasing.com" target="_blank" rel="noopener noreferrer" aria-label="Open Max's GitHub in a new tab">Visit</a>
+              <a class="btn-secondary" href="https://github.com/maxzintel" target="_blank" rel="noopener noreferrer" aria-label="View MaxFindsCars related code on GitHub">Details</a>
             </div>
           </article>
         </div>
       </section>
-      <section id="contact"></section>
+      <section id="contact" class="contact-section" aria-label="Contact">
+        <div class="section-container">
+          <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true" data-aos-offset="100">Contact</h2>
+
+          <div class="contact-content" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+            <p>I'm not actively looking for new roles at the moment, but feel free to reach out if you'd like to connect!</p>
+            <a href="mailto:maxz@hey.com" class="cta-button" aria-label="Email Max">Email Me</a>
+
+            <div class="social-links" role="list" aria-label="Contact social links">
+              <a href="https://github.com/maxzintel" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/max-zintel/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <div class="footer-content">
+            <p>© 2025 Max Zintel. All rights reserved.</p>
+            <button id="scanline-toggle" class="effect-toggle" aria-label="Toggle scanline effect" aria-pressed="true">
+              Scanlines: <span class="toggle-state">On</span>
+            </button>
+          </div>
+          <div id="scanline-overlay" class="scanline-overlay active" aria-hidden="true"></div>
+        </footer>
+      </section>
     </div>
   </main>
 
