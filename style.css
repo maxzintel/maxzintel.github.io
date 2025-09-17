@@ -449,6 +449,42 @@ input, button, textarea, select { font: inherit; }
 
 .about-section { padding-top: var(--spacing-xl); }
 .retro-heading { font-family: var(--heading-font); color: var(--neon-green); text-shadow: 0 0 8px rgba(57,255,20,0.5); margin-bottom: var(--spacing-md); }
+.about-intro { max-width: 900px; margin-left: auto; margin-right: auto; text-align: center; }
+.about-headline { font-family: var(--heading-font); font-size: clamp(1.4rem, 3.2vw, 2.2rem); color: var(--text-color); margin-bottom: var(--spacing-sm); }
+.about-subhead { color: #cbd3e1; margin-bottom: var(--spacing-sm); }
+.about-body { color: #aab3c5; }
+
+.about-now { max-width: 900px; margin: var(--spacing-lg) auto 0; text-align: left; }
+.about-list { list-style: none; padding-left: 0; display: grid; gap: var(--spacing-sm); }
+.about-facts { margin-top: var(--spacing-sm); color: #9aa3b6; font-size: 0.95rem; }
+
+.metrics-strip {
+  max-width: 900px;
+  margin: var(--spacing-lg) auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+.metric-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 12px rgba(57,255,20,0.12) inset;
+  padding: var(--spacing-md);
+  text-align: center;
+}
+.metric-value { font-family: var(--heading-font); color: var(--neon-green); font-size: clamp(1.4rem, 4.2vw, 2.4rem); text-shadow: 0 0 8px rgba(57,255,20,0.45); }
+.metric-label { color: #cbd3e1; margin-top: 6px; font-size: 0.95rem; }
+
+@media (max-width: 700px) {
+  .metrics-strip { grid-template-columns: 1fr; }
+}
+
+.about-favorites { max-width: 900px; margin: var(--spacing-xl) auto 0; }
+.favorites-list { list-style: none; padding-left: 0; display: grid; gap: 8px; }
+.favorites-list a { color: var(--cyan); text-decoration: none; }
+.favorites-list a:hover { text-decoration: underline; }
+.fav-updated { font-size: 0.8rem; color: #8892a6; margin-left: 6px; }
 .sub-heading { font-family: var(--heading-font); color: var(--text-color); margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); }
 
 /* About lists with neon pixel bullets */

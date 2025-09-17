@@ -218,6 +218,44 @@
     });
   }
 
+  function initDynamicDaysCounters() {
+    try {
+      var nodes = document.querySelectorAll('.dynamic-days[data-days-from]');
+      if (!nodes.length) return;
+      nodes.forEach(function (el) {
+        var from = el.getAttribute('data-days-from');
+        var plus = el.getAttribute('data-plus') === 'true';
+        var start = new Date(from + 'T00:00:00Z');
+        if (isNaN(start)) return;
+        var now = new Date();
+        var diffMs = now - start;
+        var days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+        el.textContent = plus ? (days) : String(days);
+      });
+    } catch (e) { console.debug('dynamic days error', e); }
+  }
+
+  function initDynamicCoffeesCounter() {
+    try {
+      var el = document.querySelector('.dynamic-coffees');
+      if (!el) return;
+      var baseDateStr = el.getAttribute('data-base-date');
+      var startStr = el.getAttribute('data-start');
+      var perDayStr = el.getAttribute('data-per-day');
+      var baseDate = new Date(baseDateStr + 'T00:00:00Z');
+      var startCount = parseInt(startStr, 10);
+      var perDay = parseInt(perDayStr, 10) || 3;
+      if (isNaN(baseDate) || isNaN(startCount)) return;
+
+      var now = new Date();
+      var diffMs = now - baseDate;
+      var days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      var total = startCount + (days * perDay);
+
+      el.textContent = total.toLocaleString();
+    } catch (e) { console.debug('dynamic coffees error', e); }
+  }
+
   // Audio Controller
   var AudioController = (function () {
     var api = { init: init, toggleMute: toggleMute, playSound: playSound };
@@ -307,6 +345,8 @@
       AudioController.init();
       initScanlineEffect();
       initProjectModals();
+      initDynamicDaysCounters();
+      initDynamicCoffeesCounter();
 
       var supportsCanvas = !!window.HTMLCanvasElement;
       var supportsCssSnap = CSS && CSS.supports && CSS.supports('scroll-snap-type: y mandatory');
