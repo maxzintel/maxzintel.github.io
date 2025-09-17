@@ -6,100 +6,271 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>maxzintel.dev</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-  <link rel="icon" href="./media/purplecow.gif"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" href="./media/purplecow.gif">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <section class="header">
-    <h2 class="header-text">maxzintel.dev</h2>
-    </p>
-    <p class="logo-box">
-      <a href="https://github.com/maxzintel">
-        <img class="logo" src="./media/Google Chrome.png" alt="Max's GitHub Profile">
-      </a>
-    </p>
-    <p class="logo-box">
-      <a href="https://twitter.com/maxjzin">
-        <img class="logo" src="./media/Twitter.png" alt="Max's Twitter Profile">
-      </a>
-    </p>
-    <p class="logo-box">
-      <a href="https://www.instagram.com/max.zintel/">
-        <img class="logo" src="./media/Instagram Old.png" alt="Max's Instagram Profile">
-      </a>
-    </p>
-    <p class="logo-box">
-      <a href="https://www.linkedin.com/in/max-zintel/">
-        <img class="logo" src="./media/LinkedIn.png" alt="Max's LinkedIn Profile">
-      </a>
-    </p>
-  </section>
-  <div class="content">
-    <section>
-      <img class="responsive" src="./media/purplecow.gif">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="marquee" aria-label="Announcement">
+      <div class="marquee__inner" aria-hidden="true">
+        <span>I'VE ALWAYS WANTED TO MAKE A WEBSITE WITH A MARQUEE • WHAT'S SUPPOSED TO BE UP HERE? • 50% OFF SALE ON... SOMETHING • SUBSCRIBE TO MAXFINDSCARS.COM • </span>
+        <span>I'VE ALWAYS WANTED TO MAKE A WEBSITE WITH A MARQUEE • WHAT'S SUPPOSED TO BE UP HERE? • 50% OFF SALE ON VISITING MAXZINTEL.DEV • FOR REAL, SUBSCRIBE TO MAXFINDSCARS.COM • </span>
+      </div>
+    </div>
+    <nav class="main-nav container" aria-label="Primary">
+      <section class="header">
+        <h2 class="header-text">maxzintel.dev</h2>
+        <div class="header-actions">
+          <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+          <button id="audio-toggle" class="audio-toggle is-muted" aria-label="Toggle audio" title="Toggle audio">
+            <span class="icon-on" aria-hidden="true">🔊</span>
+            <span class="icon-off" aria-hidden="true">🔇</span>
+          </button>
+        </div>
+        <ul id="primary-nav" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="hero" class="hero-section" aria-label="Intro">
+      <canvas id="starfield" aria-hidden="true">Your browser does not support the canvas element. The background animation is decorative.</canvas>
+      <div class="hero-content">
+        <h1 class="neon-title" data-aos="fade-up" data-aos-once="true">Max Zintel</h1>
+        <div class="social-icons" aria-label="Social links">
+          <p class="logo-box">
+            <a href="https://github.com/maxzintel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="./media/Google Chrome.png" alt="Max's GitHub Profile">
+            </a>
+          </p>
+          <p class="logo-box">
+            <a href="https://twitter.com/maxjzin" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="./media/twitter.png" alt="Max's Twitter Profile">
+            </a>
+          </p>
+          <p class="logo-box">
+            <a href="https://www.instagram.com/max.zintel/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="./media/Instagram Old.png" alt="Max's Instagram Profile">
+            </a>
+          </p>
+          <p class="logo-box">
+            <a href="https://www.linkedin.com/in/max-zintel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <img class="logo" src="./media/linkedin.png" alt="Max's LinkedIn Profile">
+            </a>
+          </p>
+        </div>
+        <p class="tagline" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">Software Leader • Solopreneur • Car Nut • Gym Rat</p>
+        <a href="#about" class="cta-button" aria-label="View my projects" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">Who is this guy?</a>
+      </div>
     </section>
-    <section>
-      <p class="text-box">
-        Max Zintel
-      </p>
-      <ul>
-        <li>
-          <p>DevOps Lead, Creator of MaxFindsCars.com</p>
-        </li>
-        <li>
-          Learning by doing:
-          <ul>
-            <li>
-              <p>Entrepeneurship & Early-Stage Business Development</p>
-            </li>
-            <li>
-              <p>Leadership & Mental Models</p>
-            </li>
-            <li>
-              <p>Human Optimization</p>
-            </li>
-            <li>
-              <p>Project Conception & Development</p>
-            </li>
-          </ul>
-        </li>
+    <div id="about" class="content">
+      <section>
+        <img class="responsive" src="./media/purplecow.gif">
+      </section>
+      <section class="about-section">
+        <!-- <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true" data-aos-offset="100">About</h2> -->
 
-        <li>
-          Favorite Podcasts & Books Right Now:
-          <ul>
-            <li>
-              <a href="https://hubermanlab.com/">Huberman Lab</a>
-            </li>
-            <li>
-              <a href="https://open.spotify.com/show/6YNopzKDGDwf0auIpPTIID?si=032b5f1c00634599">The Game w/ Alex Hormozi</a>
-            </li>
-            <li>
-              <a href="https://open.spotify.com/show/1gqvQ7h7BxNSVoQVTnwihr?si=dd31b08a81fb444d">How to Take Over the World</a>
-            </li>
-            <li>
-              <a href="https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike/dp/1501135910/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=">Shoe Dog, by Phil Knight</a>
-            </li>
-            <li>
-              <a href="https://www.amazon.com/Build-Unorthodox-Guide-Making-Things/dp/0063046067/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1672157303&sr=1-1">Build, By Tony Fadell</a>
-            </li>
+        <div class="about-intro" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
+          <h3 class="about-headline">Howdy, and welcome dear traveler.</h3>
+          <p class="about-subhead">I'm Max — I build software, lift things, fix cars, and try (but often fail) to get better at golf.</p>
+          <p class="about-body">I like approachable, niche products solving real problems in a way that's simple & easy to use. This site is, frankly, a procrastination project that will serve as a running log of experiments, interests, current projects, and stuff I'm learning. Will I keep it up to date? Who knows (probably not).<br></p>
+        </div>
+
+        <div class="about-now" data-aos="fade-up" data-aos-delay="120" data-aos-once="true" aria-label="Currently">
+          <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true" data-aos-offset="100">What I'm currently up to...</h2>
+          <ul class="about-list">
+            <li>Shipping car stuff for car nerds (MaxFindsCars)</li>
+            <li>Leading an engineering team for our core CRM product (Funnel Leasing)</li>
+            <li>Playing lots of pickleball, golf, ping pong, and darts (yeah yeah, weird, nerdy combo)</li>
+            <li>Learning iRacing with the hopes of one day getting to lose to Max Verstappen in a sim race.</li>
           </ul>
-        </li>
-        <li>
-          Industries & Other Things That Interest Me:
-          <ul>
-            <li>
-              <p>Applications Built w/ Generative AI</p>
-            <li>
-              <p>Motorsport & Automotive</p>
-            </li>
-            <li>
-              <p>Fitness & Weightlifting</p>
-            </li>
+          <p class="about-facts">loves weird ui design • hates cardio • too many car tabs</p>
+        </div>
+
+        <div class="metrics-strip" data-aos="fade-up" data-aos-delay="150" data-aos-once="true" aria-label="Proof metrics">
+          <div class="metric-card" aria-label="MFC streak">
+            <div class="metric-value"><span class="dynamic-days" data-days-from="2024-03-10" data-plus="true" title="Days since 2024-03-10">---</span></div>
+            <div class="metric-label">days in a row shipping MFC</div>
+          </div>
+          <div class="metric-card" aria-label="Coffees consumed">
+            <div class="metric-value"><span class="dynamic-coffees" data-base-date="2025-09-17" data-start="15330" data-per-day="3" title="Coffees since base date">15,330</span></div>
+            <div class="metric-label">Coffees consumed</div>
+          </div>
+          <div class="metric-card" aria-label="Perf improvement">
+            <div class="metric-value">1005lbs</div>
+            <div class="metric-label">Big 3 PR Weight</div>
+          </div>
+        </div>
+
+        <div class="about-favorites" data-aos="fade-up" data-aos-delay="180" data-aos-once="true">
+          <h3 class="sub-heading">Favorite Podcasts, Blogs, & Books Right Now <span class="fav-updated">(last updated recently)</span></h3>
+          <ul class="favorites-list">
+            <li><a href="https://www.amazon.com/Alchemist-Paulo-Coelho/dp/0062315005/ref=sr_1_1?crid=344CP5EA0GWUI&dib=eyJ2IjoiMSJ9.wyRbvJyC-p5lQL2OngA4gSoCzpZtSP4q83f1eRD5zjBJlZqYJaE5c2d_7yJ_3I4LoYBCPosS7Rv-msA-5lBMJAEKyhN1dN4kNplBhI6av9T6P06pIisXeO8GxARh_Fr73tHfiLomEwh9MPFOd3OavZEM7XVVPipZ6spx1xR0WO3iC1v0BcIxhpWR5bnUb1AEs7jtpPjC-7MFYeb1qsMLhpE_wGCU9gEXxMmMVHXTl7k.2MvnHGy86oqGWG2OtzZXeOEEAAAIkukWcPogG0G2PxA&dib_tag=se&keywords=the+alchemist&qid=1758074693&s=books&sprefix=the+alechmeist%2Cstripbooks%2C106&sr=1-1">The Alchemist, By Paulo Coelho</a></li>
+            <li><a href="https://www.amazon.com/How-Build-Car-Autobiography-Greatest/dp/000819680X">How to Build a Car, By Adrian Newey</a></li>
+            <li><a href="https://readmake.com">MAKE: The Indie Makers Handbook, By Pieter Levels</a></li>
+            <li><a href="https://dieworkwear.com/">Die, Workwear!</a></li>
+            <li><a href="https://hubermanlab.com/">Huberman Lab</a></li>
+            <li><a href="https://www.mfmpod.com/">My First Million</a></li>
+            <li><a href="https://open.spotify.com/show/1gqvQ7h7BxNSVoQVTnwihr?si=dd31b08a81fb444d">How to Take Over the World</a></li>
+            <li><a href="https://www.amazon.com/Shoe-Dog-Memoir-Creator-Nike/dp/1501135910/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=">Shoe Dog, by Phil Knight</a></li>
+            <li><a href="https://www.amazon.com/Build-Unorthodox-Guide-Making-Things/dp/0063046067/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1672157303&sr=1-1">Build, By Tony Fadell</a></li>
           </ul>
-        </li>
-      </ul>
-    </section>
+        </div>
+      </section>
+      <section id="projects" class="projects-section">
+        <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true" data-aos-offset="100">Projects</h2>
+        <div class="projects-grid container" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+          <article class="project-card" data-aos="fade-up" data-aos-delay="150" data-aos-once="true" aria-labelledby="proj-maxfindscars">
+            <div class="project-media">
+              <img src="./media/mfc-gigachad.gif" alt="Preview of MaxFindsCars.com search interface" loading="lazy" decoding="async">
+            </div>
+            <h3 class="project-title" id="proj-maxfindscars">MaxFindsCars.com</h3>
+            <p class="project-desc">The easiest way to find your dream car.</p>
+            <div class="project-links">
+              <a class="btn" href="https://maxfindscars.com" target="_blank" rel="noopener noreferrer" aria-label="Open MaxFindsCars.com in a new tab">Visit</a>
+              <a class="btn-secondary" href="#" data-project="maxfindscars" aria-label="View details for MaxFindsCars">Details</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="220" data-aos-once="true" aria-labelledby="proj-thissite">
+            <div class="project-media">
+              <img src="./media/drift.gif" alt="Preview of this retro website" loading="lazy" decoding="async">
+            </div>
+            <h3 class="project-title" id="proj-thissite">DevTurbo</h3>
+            <p class="project-desc">Cloud experts for VC-funded startups.</p>
+            <div class="project-links">
+              <a class="btn-secondary" href="#" data-project="devturbo" aria-label="View details for DevTurbo">Details</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="290" data-aos-once="true" aria-labelledby="proj-misc">
+            <div class="project-media">
+              <img src="./media/funnel-logo.gif" alt="Preview collage of various dev experiments" loading="lazy" decoding="async">
+            </div>
+            <h3 class="project-title" id="proj-misc">Funnel Leasing</h3>
+            <p class="project-desc">Full time role managing our core CRM Engineering team.</p>
+            <div class="project-links">
+              <a class="btn" href="https://funnelleasing.com" target="_blank" rel="noopener noreferrer" aria-label="Open Max's GitHub in a new tab">Visit</a>
+              <a class="btn-secondary" href="#" data-project="funnel" aria-label="View details for Funnel Leasing">Details</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="contact" class="contact-section" aria-label="Contact">
+        <div class="section-container">
+          <h2 class="retro-heading" data-aos="fade-up" data-aos-once="true" data-aos-offset="100">Contact</h2>
+
+          <div class="contact-content" data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+            <p>I'm not actively looking for new roles at the moment, but feel free to reach out if you'd like to connect!</p>
+            <a href="mailto:maxz@hey.com" class="cta-button" aria-label="Email Max">Email Me</a>
+            <p><br></p>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <div class="footer-content">
+            <p>© 2025 Max Zintel. All rights reserved.</p>
+            <button id="scanline-toggle" class="effect-toggle" aria-label="Toggle scanline effect" aria-pressed="true">
+              Scanlines: <span class="toggle-state">On</span>
+            </button>
+            <div class="social-icons" aria-label="Social links footer">
+              <p class="logo-box">
+                <a href="https://github.com/maxzintel" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                  <img class="logo" src="./media/Google Chrome.png" alt="Max's GitHub Profile">
+                </a>
+              </p>
+              <p class="logo-box">
+                <a href="https://twitter.com/maxjzin" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                  <img class="logo" src="./media/twitter.png" alt="Max's Twitter Profile">
+                </a>
+              </p>
+              <p class="logo-box">
+                <a href="https://www.instagram.com/max.zintel/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                  <img class="logo" src="./media/Instagram Old.png" alt="Max's Instagram Profile">
+                </a>
+              </p>
+              <p class="logo-box">
+                <a href="https://www.linkedin.com/in/max-zintel/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                  <img class="logo" src="./media/linkedin.png" alt="Max's LinkedIn Profile">
+                </a>
+              </p>
+            </div>
+          </div>
+          <div id="scanline-overlay" class="scanline-overlay active" aria-hidden="true"></div>
+        </footer>
+      </section>
+    </div>
+  </main>
+
+  <!-- Project Detail Templates (edit freely) -->
+  <template id="template-project-maxfindscars">
+    <h3 class="modal-title">MaxFindsCars.com</h3>
+    <p>The easiest way to find enthusiast cars online. A SaaS business I've built from the ground up, working on it every day for the last 550+ days and counting.</p>
+    <ul>
+      <li>Gathers data from many sources of varying types (auction sites, dealerships, syndication, etc), and sends listing notifications to users via email.</li>
+      <li>Thousands of users, hundreds of thousands of listings, and growing.</li>
+      <li>Freemium model with paid tier & emphasis on social share.</li>
+      <li>Stack: Next.js, Postgres, Render, Posthog, Stripe, etc.</li>
+      <li>Skills: Bootstrapped marketing & growth, feature prioritization, business operation, etc.</li>
+    </ul>
+    <p>
+      <a href="https://maxfindscars.com" target="_blank" rel="noopener noreferrer">Visit Site</a>
+    </p>
+  </template>
+
+  <template id="template-project-devturbo">
+    <h3 class="modal-title">DevTurbo</h3>
+    <p>Cloud experts for VC-funded startups. A fractionalized consulting firm I started in 2023 to help startups get their infrastructure, CI/CD, and DevOps workflows up and running quickly and efficiently.</p>
+    <ul>
+      <li>Focus: AWS, IaC, CI/CD, Kubernetes, cost/perf optimization, secrets management, etc.</li>
+      <li>Followed the 'productized service' model, clients were mostly VC/Angel-funded startups.</li>
+      <li>Scaled to 6-figures of ARR, but shut down in 2024 to focus on other projects.</li>
+    </ul>
+  </template>
+
+  <template id="template-project-funnel">
+    <h3 class="modal-title">Funnel Leasing</h3>
+    <p>Full-time role managing core CRM engineering. Drove roadmap, quality, and reliability improvements across critical systems. Prior to this, I was the DevOps Lead at Funnel Leasing as well.</p>
+    <ul>
+      <li>Areas: CRM, DevOps, Infrastructure, CI/CD, Security, Monitoring / Site Reliability.</li>
+      <li>Currently managing a team of 5 engineers, 2 QA engineers, and 1 Product Manager.</li>
+      <li>Created monitoring processes and workflows to improve team’s code reliability, context, and performance.</li>
+      <li>Strategic team leader bridging engineering, product, site reliability, and more, serving as the impetus & facilitator
+        of a breadth of initiatives - internal & external to our engineering team.</li>
+      <li>Led project to implement PgBouncer, a database connection sharing tool, for our primary CRM application.
+        PgBouncer has 100% availability in the 2 years since its deployment in our environment and improved
+        web app response times by 300% under load.</li>
+      <li>Led SOC 2 Audit process for our cloud and infrastructure. Ensured we were certified and re-certified
+        repeatedly during our tenure via process implementation and security scanning/hardening.</li>
+      <li>& lots more... Email me for more details!</li>
+    </ul>
+    <p>
+      <a href="https://funnelleasing.com" target="_blank" rel="noopener noreferrer">Company Site</a>
+    </p>
+  </template>
+
+  <!-- Reusable Modal -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button class="modal-close" aria-label="Close details">✕</button>
+      <div class="modal-content" id="project-modal-content">
+        <!-- content injected dynamically -->
+      </div>
+    </div>
   </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.43/bundled/lenis.min.js"></script>
+  <script src="https://unpkg.com/howler@2.2.4/dist/howler.core.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
